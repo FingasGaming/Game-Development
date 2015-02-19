@@ -7,8 +7,16 @@
 #else
 #define JFE_API __declspec(dllimport)
 #endif
+
+#include <cassert>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+
+#include "data\kpLua\lua.hpp"
 namespace JackFruitEngine{
-	class kpCore
+	class JFE_API kpCore
 	{
 	public:
 		kpCore(void);

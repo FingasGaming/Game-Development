@@ -76,9 +76,66 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="data\kpLua\lapi.c" />
+    <ClCompile Include="data\kpLua\lauxlib.c" />
+    <ClCompile Include="data\kpLua\lbaselib.c" />
+    <ClCompile Include="data\kpLua\lbitlib.c" />
+    <ClCompile Include="data\kpLua\lcode.c" />
+    <ClCompile Include="data\kpLua\lcorolib.c" />
+    <ClCompile Include="data\kpLua\lctype.c" />
+    <ClCompile Include="data\kpLua\ldblib.c" />
+    <ClCompile Include="data\kpLua\ldebug.c" />
+    <ClCompile Include="data\kpLua\ldo.c" />
+    <ClCompile Include="data\kpLua\ldump.c" />
+    <ClCompile Include="data\kpLua\lfunc.c" />
+    <ClCompile Include="data\kpLua\lgc.c" />
+    <ClCompile Include="data\kpLua\linit.c" />
+    <ClCompile Include="data\kpLua\liolib.c" />
+    <ClCompile Include="data\kpLua\llex.c" />
+    <ClCompile Include="data\kpLua\lmathlib.c" />
+    <ClCompile Include="data\kpLua\lmem.c" />
+    <ClCompile Include="data\kpLua\loadlib.c" />
+    <ClCompile Include="data\kpLua\lobject.c" />
+    <ClCompile Include="data\kpLua\lopcodes.c" />
+    <ClCompile Include="data\kpLua\loslib.c" />
+    <ClCompile Include="data\kpLua\lparser.c" />
+    <ClCompile Include="data\kpLua\lstate.c" />
+    <ClCompile Include="data\kpLua\lstring.c" />
+    <ClCompile Include="data\kpLua\lstrlib.c" />
+    <ClCompile Include="data\kpLua\ltable.c" />
+    <ClCompile Include="data\kpLua\ltablib.c" />
+    <ClCompile Include="data\kpLua\ltm.c" />
+    <ClCompile Include="data\kpLua\lundump.c" />
+    <ClCompile Include="data\kpLua\lvm.c" />
+    <ClCompile Include="data\kpLua\lzio.c" />
     <ClCompile Include="kpCore.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="data\kpLua\lapi.h" />
+    <ClInclude Include="data\kpLua\lauxlib.h" />
+    <ClInclude Include="data\kpLua\lcode.h" />
+    <ClInclude Include="data\kpLua\lctype.h" />
+    <ClInclude Include="data\kpLua\ldebug.h" />
+    <ClInclude Include="data\kpLua\ldo.h" />
+    <ClInclude Include="data\kpLua\lfunc.h" />
+    <ClInclude Include="data\kpLua\lgc.h" />
+    <ClInclude Include="data\kpLua\llex.h" />
+    <ClInclude Include="data\kpLua\llimits.h" />
+    <ClInclude Include="data\kpLua\lmem.h" />
+    <ClInclude Include="data\kpLua\lobject.h" />
+    <ClInclude Include="data\kpLua\lopcodes.h" />
+    <ClInclude Include="data\kpLua\lparser.h" />
+    <ClInclude Include="data\kpLua\lstate.h" />
+    <ClInclude Include="data\kpLua\lstring.h" />
+    <ClInclude Include="data\kpLua\ltable.h" />
+    <ClInclude Include="data\kpLua\ltm.h" />
+    <ClInclude Include="data\kpLua\lua.h" />
+    <ClInclude Include="data\kpLua\lua.hpp" />
+    <ClInclude Include="data\kpLua\luaconf.h" />
+    <ClInclude Include="data\kpLua\lualib.h" />
+    <ClInclude Include="data\kpLua\lundump.h" />
+    <ClInclude Include="data\kpLua\lvm.h" />
+    <ClInclude Include="data\kpLua\lzio.h" />
     <ClInclude Include="kpCore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
