@@ -1,11 +1,11 @@
 #include "kpCore.h"
 
 
-kpCore::kpCore(void)
+JackFruitEngine::kpCore::kpCore(void)
 {
 }
 
 
-kpCore::~kpCore(void)
+JackFruitEngine::kpCore::~kpCore(void)
 {
 }
