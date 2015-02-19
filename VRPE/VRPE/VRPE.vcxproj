@@ -41,6 +41,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(Configuration)\Temp\</IntDir>
     <TargetExt>.dll</TargetExt>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
