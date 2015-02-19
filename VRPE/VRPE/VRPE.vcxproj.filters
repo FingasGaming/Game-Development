@@ -98,6 +98,9 @@
     <ClCompile Include="data\kpLua\lzio.c">
       <Filter>data\kpLua</Filter>
     </ClCompile>
+    <ClCompile Include="kpKernel.cpp" />
+    <ClCompile Include="data\Util\kpBase\kpScript.cpp" />
+    <ClCompile Include="data\Util\kpBase\kpComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kpCore.h" />
@@ -176,6 +179,10 @@
     <ClInclude Include="data\kpLua\lzio.h">
       <Filter>data\kpLua</Filter>
     </ClInclude>
+    <ClInclude Include="data\Util\kpBindLua.h" />
+    <ClInclude Include="kpKernel.h" />
+    <ClInclude Include="data\Util\kpBase\kpScript.h" />
+    <ClInclude Include="data\Util\kpBase\kpComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="data">

@@ -109,7 +109,10 @@
     <ClCompile Include="data\kpLua\lundump.c" />
     <ClCompile Include="data\kpLua\lvm.c" />
     <ClCompile Include="data\kpLua\lzio.c" />
+    <ClCompile Include="data\Util\kpBase\kpComponent.cpp" />
     <ClCompile Include="kpCore.cpp" />
+    <ClCompile Include="kpKernel.cpp" />
+    <ClCompile Include="data\Util\kpBase\kpScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data\kpLua\lapi.h" />
@@ -137,7 +140,11 @@
     <ClInclude Include="data\kpLua\lundump.h" />
     <ClInclude Include="data\kpLua\lvm.h" />
     <ClInclude Include="data\kpLua\lzio.h" />
+    <ClInclude Include="data\Util\kpBindLua.h" />
+    <ClInclude Include="data\Util\kpBase\kpComponent.h" />
     <ClInclude Include="kpCore.h" />
+    <ClInclude Include="kpKernel.h" />
+    <ClInclude Include="data\Util\kpBase\kpScript.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

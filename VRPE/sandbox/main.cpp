@@ -6,5 +6,5 @@ int main()
 {
 	kpApplication app;
 
-	return app.run();
+	return app.run("main.lua");
 }

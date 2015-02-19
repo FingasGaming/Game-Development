@@ -14,7 +14,7 @@
 #include <string>
 #include <cstdlib>
 
-#include "data\kpLua\lua.hpp"
+#include "kpKernel.h"
 namespace JackFruitEngine{
 	class JFE_API kpCore
 	{
@@ -25,6 +25,8 @@ namespace JackFruitEngine{
 
 	class JFE_API kpApplication
 	{
+	private:
+		kpKernel* kernel;
 	public:
 		kpApplication(void);
 		~kpApplication(void);
