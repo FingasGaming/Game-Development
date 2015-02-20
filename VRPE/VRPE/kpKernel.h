@@ -5,6 +5,7 @@
 #include "data\kpLua\lua.hpp"
 #include "data\Util\kpBase\kpScript.h"
 
+//int kpAPILIBS(lua_State* l);
 namespace JackFruitEngine
 {
 	class kpKernel

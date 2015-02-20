@@ -7,7 +7,8 @@
 extern "C"{
 #include "lauxlib.h"
 }
-
+#include <string>
+using namespace std;
 
 namespace JackFruitEngine{
 

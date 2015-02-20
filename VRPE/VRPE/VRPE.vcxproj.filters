@@ -101,6 +101,7 @@
     <ClCompile Include="kpKernel.cpp" />
     <ClCompile Include="data\Util\kpBase\kpScript.cpp" />
     <ClCompile Include="data\Util\kpBase\kpComponent.cpp" />
+    <ClCompile Include="kpAPI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kpCore.h" />

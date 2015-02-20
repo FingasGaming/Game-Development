@@ -1,8 +1,9 @@
 
 #include <kpCore.h>
+#include <SDL.h>
 
 using namespace JackFruitEngine;
-int main()
+int main(int args, char** argv)
 {
 	kpApplication app;
 

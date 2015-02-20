@@ -1,6 +1,6 @@
 #include "kpKernel.h"
 
-
+int kpAPILIBS(lua_State* l);
 JackFruitEngine::kpKernel::kpKernel(void)
 {
 }
@@ -30,6 +30,7 @@ int JackFruitEngine::kpKernel::initialise()
 		return returnError;
 	}
 	luaL_openlibs(l);/**/
+	kpAPILIBS(l);
 
 	return returnError;
 }

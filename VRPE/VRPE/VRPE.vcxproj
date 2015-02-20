@@ -42,6 +42,7 @@
     <IntDir>$(Configuration)\Temp\</IntDir>
     <TargetExt>.dll</TargetExt>
     <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <LibraryPath>$(ProjectDir)..\VRPE\Middleware\SDL2\bin\;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,10 +54,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\VRPE\Middleware\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,6 +113,7 @@
     <ClCompile Include="data\kpLua\lvm.c" />
     <ClCompile Include="data\kpLua\lzio.c" />
     <ClCompile Include="data\Util\kpBase\kpComponent.cpp" />
+    <ClCompile Include="kpAPI.cpp" />
     <ClCompile Include="kpCore.cpp" />
     <ClCompile Include="kpKernel.cpp" />
     <ClCompile Include="data\Util\kpBase\kpScript.cpp" />
