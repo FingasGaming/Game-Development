@@ -2,10 +2,9 @@
 #ifndef ENGINE_KERNEL_H
 #define ENGINE_KERNEL_H
 
-#include "data\kpLua\lua.hpp"
-#include "data\Util\kpBase\kpScript.h"
+#include "bin\Util\kpEngine.h"
+#include "bin\Util\kpSystem\kpStructure.h"
 
-//int kpAPILIBS(lua_State* l);
 namespace JackFruitEngine
 {
 	class kpKernel

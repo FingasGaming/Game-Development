@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ENGINE_H
-#define ENGINE_H
+#ifndef CORE_ENGINE_H
+#define CORE_ENGINE_H
 
 #ifndef API_EXPORTS
 #define JFE_API __declspec(dllexport) 
@@ -15,7 +15,9 @@
 #include <cstdlib>
 
 #include "kpKernel.h"
-namespace JackFruitEngine{
+
+namespace JackFruitEngine
+{
 	class JFE_API kpCore
 	{
 	public:
