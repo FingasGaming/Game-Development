@@ -7,6 +7,7 @@ JackFruitEngine::kpKernel::kpKernel(void)
 JackFruitEngine::kpKernel::~kpKernel(void)
 {
 	kill();
+	SDL_Quit();
 }
 bool JackFruitEngine::kpKernel::kill()
 {
@@ -21,6 +22,14 @@ bool JackFruitEngine::kpKernel::kill()
 int JackFruitEngine::kpKernel::initialise()
 {
 	returnError = 0;
+
+	if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
+	{
+		//to create lua state for scripting
+		returnError++;
+		return returnError;
+	}
+
 	l = luaL_newstate();
 
 	if(l == NULL)
@@ -31,6 +40,7 @@ int JackFruitEngine::kpKernel::initialise()
 	}
 	luaL_openlibs(l);/**/
 	kpAPILIBS(l);
+
 
 	return returnError;
 }
