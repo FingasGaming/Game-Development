@@ -2,188 +2,200 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="kpCore.cpp" />
-    <ClCompile Include="data\kpLua\lapi.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lauxlib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lbaselib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lbitlib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lcode.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lcorolib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lctype.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ldblib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ldebug.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ldo.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ldump.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lfunc.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lgc.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\linit.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\liolib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\llex.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lmathlib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lmem.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\loadlib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lobject.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lopcodes.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\loslib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lparser.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lstate.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lstring.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lstrlib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ltable.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ltablib.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\ltm.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lundump.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lvm.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
-    <ClCompile Include="data\kpLua\lzio.c">
-      <Filter>data\kpLua</Filter>
-    </ClCompile>
     <ClCompile Include="kpKernel.cpp" />
-    <ClCompile Include="data\Util\kpBase\kpScript.cpp" />
-    <ClCompile Include="data\Util\kpBase\kpComponent.cpp" />
     <ClCompile Include="kpAPI.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpComponent.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpScript.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lapi.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lauxlib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lbaselib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lbitlib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lcode.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lcorolib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lctype.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldblib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldebug.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldo.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldump.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lfunc.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lgc.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\linit.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\liolib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\llex.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lmathlib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lmem.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\loadlib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lobject.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lopcodes.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\loslib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lparser.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lstate.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lstring.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lstrlib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ltable.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ltablib.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ltm.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lundump.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lvm.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lzio.c">
+      <Filter>data\kpLua</Filter>
+    </ClCompile>
+    <ClCompile Include="bin\Util\kpEngine.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpVector3f.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpMatrix4f.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpQuaternion.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpTransform.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpStructure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kpCore.h" />
-    <ClInclude Include="data\kpLua\lapi.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lauxlib.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lcode.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lctype.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\ldebug.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\ldo.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lfunc.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lgc.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\llex.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\llimits.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lmem.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lobject.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lopcodes.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lparser.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lstate.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lstring.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\ltable.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\ltm.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lua.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lua.hpp">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\luaconf.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lualib.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lundump.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lvm.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\kpLua\lzio.h">
-      <Filter>data\kpLua</Filter>
-    </ClInclude>
-    <ClInclude Include="data\Util\kpBindLua.h" />
     <ClInclude Include="kpKernel.h" />
-    <ClInclude Include="data\Util\kpBase\kpScript.h" />
-    <ClInclude Include="data\Util\kpBase\kpComponent.h" />
+    <ClInclude Include="bin\Util\kpBase\kpComponent.h" />
+    <ClInclude Include="bin\Util\kpBase\kpScript.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lapi.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lauxlib.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lcode.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lctype.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ldebug.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ldo.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lfunc.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lgc.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\llex.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\llimits.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lmem.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lobject.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lopcodes.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lparser.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lstate.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lstring.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ltable.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ltm.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lua.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lua.hpp">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\luaconf.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lualib.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lundump.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lvm.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lzio.h">
+      <Filter>data\kpLua</Filter>
+    </ClInclude>
+    <ClInclude Include="bin\Util\kpBindLua.h" />
+    <ClInclude Include="bin\Util\kpEngine.h" />
+    <ClInclude Include="bin\Util\kpMath\kpVector3f.h" />
+    <ClInclude Include="bin\Util\kpMath\kpMatrix4f.h" />
+    <ClInclude Include="bin\Util\kpMath\kpQuaternion.h" />
+    <ClInclude Include="bin\Util\kpMath\kpTransform.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpStructure.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="data">

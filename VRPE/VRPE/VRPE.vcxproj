@@ -59,7 +59,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;opengl32.lib;glu32.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,75 +80,87 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="data\kpLua\lapi.c" />
-    <ClCompile Include="data\kpLua\lauxlib.c" />
-    <ClCompile Include="data\kpLua\lbaselib.c" />
-    <ClCompile Include="data\kpLua\lbitlib.c" />
-    <ClCompile Include="data\kpLua\lcode.c" />
-    <ClCompile Include="data\kpLua\lcorolib.c" />
-    <ClCompile Include="data\kpLua\lctype.c" />
-    <ClCompile Include="data\kpLua\ldblib.c" />
-    <ClCompile Include="data\kpLua\ldebug.c" />
-    <ClCompile Include="data\kpLua\ldo.c" />
-    <ClCompile Include="data\kpLua\ldump.c" />
-    <ClCompile Include="data\kpLua\lfunc.c" />
-    <ClCompile Include="data\kpLua\lgc.c" />
-    <ClCompile Include="data\kpLua\linit.c" />
-    <ClCompile Include="data\kpLua\liolib.c" />
-    <ClCompile Include="data\kpLua\llex.c" />
-    <ClCompile Include="data\kpLua\lmathlib.c" />
-    <ClCompile Include="data\kpLua\lmem.c" />
-    <ClCompile Include="data\kpLua\loadlib.c" />
-    <ClCompile Include="data\kpLua\lobject.c" />
-    <ClCompile Include="data\kpLua\lopcodes.c" />
-    <ClCompile Include="data\kpLua\loslib.c" />
-    <ClCompile Include="data\kpLua\lparser.c" />
-    <ClCompile Include="data\kpLua\lstate.c" />
-    <ClCompile Include="data\kpLua\lstring.c" />
-    <ClCompile Include="data\kpLua\lstrlib.c" />
-    <ClCompile Include="data\kpLua\ltable.c" />
-    <ClCompile Include="data\kpLua\ltablib.c" />
-    <ClCompile Include="data\kpLua\ltm.c" />
-    <ClCompile Include="data\kpLua\lundump.c" />
-    <ClCompile Include="data\kpLua\lvm.c" />
-    <ClCompile Include="data\kpLua\lzio.c" />
-    <ClCompile Include="data\Util\kpBase\kpComponent.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lapi.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lauxlib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lbaselib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lbitlib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lcode.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lcorolib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lctype.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldblib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldebug.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldo.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ldump.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lfunc.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lgc.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\linit.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\liolib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\llex.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lmathlib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lmem.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\loadlib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lobject.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lopcodes.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\loslib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lparser.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lstate.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lstring.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lstrlib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ltable.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ltablib.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\ltm.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lundump.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lvm.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpLua\lzio.c" />
+    <ClCompile Include="bin\Util\kpBase\kpComponent.cpp" />
     <ClCompile Include="kpAPI.cpp" />
     <ClCompile Include="kpCore.cpp" />
+    <ClCompile Include="bin\Util\kpEngine.cpp" />
     <ClCompile Include="kpKernel.cpp" />
-    <ClCompile Include="data\Util\kpBase\kpScript.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpScript.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpVector3f.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpMatrix4f.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpQuaternion.cpp" />
+    <ClCompile Include="bin\Util\kpMath\kpTransform.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpStructure.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="data\kpLua\lapi.h" />
-    <ClInclude Include="data\kpLua\lauxlib.h" />
-    <ClInclude Include="data\kpLua\lcode.h" />
-    <ClInclude Include="data\kpLua\lctype.h" />
-    <ClInclude Include="data\kpLua\ldebug.h" />
-    <ClInclude Include="data\kpLua\ldo.h" />
-    <ClInclude Include="data\kpLua\lfunc.h" />
-    <ClInclude Include="data\kpLua\lgc.h" />
-    <ClInclude Include="data\kpLua\llex.h" />
-    <ClInclude Include="data\kpLua\llimits.h" />
-    <ClInclude Include="data\kpLua\lmem.h" />
-    <ClInclude Include="data\kpLua\lobject.h" />
-    <ClInclude Include="data\kpLua\lopcodes.h" />
-    <ClInclude Include="data\kpLua\lparser.h" />
-    <ClInclude Include="data\kpLua\lstate.h" />
-    <ClInclude Include="data\kpLua\lstring.h" />
-    <ClInclude Include="data\kpLua\ltable.h" />
-    <ClInclude Include="data\kpLua\ltm.h" />
-    <ClInclude Include="data\kpLua\lua.h" />
-    <ClInclude Include="data\kpLua\lua.hpp" />
-    <ClInclude Include="data\kpLua\luaconf.h" />
-    <ClInclude Include="data\kpLua\lualib.h" />
-    <ClInclude Include="data\kpLua\lundump.h" />
-    <ClInclude Include="data\kpLua\lvm.h" />
-    <ClInclude Include="data\kpLua\lzio.h" />
-    <ClInclude Include="data\Util\kpBindLua.h" />
-    <ClInclude Include="data\Util\kpBase\kpComponent.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lapi.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lauxlib.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lcode.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lctype.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ldebug.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ldo.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lfunc.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lgc.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\llex.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\llimits.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lmem.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lobject.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lopcodes.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lparser.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lstate.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lstring.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ltable.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\ltm.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lua.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lua.hpp" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\luaconf.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lualib.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lundump.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lvm.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLua\lzio.h" />
+    <ClInclude Include="bin\Util\kpBindLua.h" />
+    <ClInclude Include="bin\Util\kpBase\kpComponent.h" />
     <ClInclude Include="kpCore.h" />
+    <ClInclude Include="bin\Util\kpEngine.h" />
     <ClInclude Include="kpKernel.h" />
-    <ClInclude Include="data\Util\kpBase\kpScript.h" />
+    <ClInclude Include="bin\Util\kpBase\kpScript.h" />
+    <ClInclude Include="bin\Util\kpMath\kpVector3f.h" />
+    <ClInclude Include="bin\Util\kpMath\kpMatrix4f.h" />
+    <ClInclude Include="bin\Util\kpMath\kpQuaternion.h" />
+    <ClInclude Include="bin\Util\kpMath\kpTransform.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpStructure.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
