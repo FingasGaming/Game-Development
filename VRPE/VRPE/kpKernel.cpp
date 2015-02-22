@@ -41,7 +41,7 @@ int JackFruitEngine::kpKernel::initialise()
 	luaL_openlibs(l);/**/
 	kpAPILIBS(l);
 
-
+	
 	return returnError;
 }
 
@@ -52,9 +52,12 @@ int JackFruitEngine::kpKernel::run()
 }
 int JackFruitEngine::kpKernel::run(const char* luafile)
 {
-	returnError = 0;
-	if(!kern.loadScript(l, luafile))
-		return returnError++;
-	return returnError;
+	JackFruitEngine::kpEngine::getEngine()->setScript(luafile);
+	return JackFruitEngine::kpEngine::getEngine()->execute(l);
+}
+int JackFruitEngine::kpKernel::run(const char* luafile, int mode)
+{
+	JackFruitEngine::kpEngine::getEngine()->setScript(luafile);
+	return JackFruitEngine::kpEngine::getEngine()->execute(l,mode);
 }
 

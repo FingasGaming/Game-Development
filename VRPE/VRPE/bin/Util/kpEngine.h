@@ -3,6 +3,7 @@
 #define ENGINE_H
 
 #include "kpBase\kpScript.h"
+#include "kpSystem\kpStructure.h"
 
 namespace JackFruitEngine
 {
@@ -12,26 +13,24 @@ namespace JackFruitEngine
 	public:
 		~kpEngine(void);
 		//Function: destroy engine & contents
-	static void destroy();
-	//Function: initialise engine
-	bool initialise();
-	//Function: initialise graphics
-	bool initialiseGraphics();
-	//Function: initialise physics
-	bool initialisePhysics();
-	//Function: initialise sound
-
-	//Function: initialise network
-
-	//Function: update engine
-	static void update();
-	//Function: render game world
-	static void draw();
-	//Function: retrieve engine
-	static kpEngine* getEngine();
+		static void destroy();
+		//Function: retrieve engine
+		static kpEngine* getEngine();
+		//
+		static SDL_Window* getMainWindow();
+		static int getRun();
+		static void init(lua_State* s);
+		static void setMainWindow(SDL_Window* win);
+		static void setRun(int win);
+		static int execute(lua_State* s, int mode = 0);
+		static void setScript(const char* s);
 	private:
-		//variables
+		//variables		
+		static int runState;
 		static kpEngine* engine;
+		static kpScript* src;
+		static SDL_Event _event;
+		static SDL_Window *window;
 		//functions
 		kpEngine(void);
 	};

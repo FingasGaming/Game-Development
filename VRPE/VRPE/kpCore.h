@@ -39,6 +39,7 @@ namespace JackFruitEngine
 		//int run(kpGame game);
 		//function runs the engine as a application from a lua script file
 		int run(const char* fileName);
+		int run(const char* fileName, int mode = 0);
 	};
 }
 #endif

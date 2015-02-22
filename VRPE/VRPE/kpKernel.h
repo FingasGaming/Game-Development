@@ -17,6 +17,7 @@ namespace JackFruitEngine
 		int initialise();
 		int run();
 		int run(const char* luafile);
+		int run(const char* luafile, int mode = 0);
 	private:
 		lua_State* l;
 		int returnError;

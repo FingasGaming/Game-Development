@@ -6,7 +6,7 @@
 
 namespace JackFruitEngine
 {
-	class kpTransform
+	class JFE_API kpTransform
 	{
 	private:
 		kpVector3f origin;

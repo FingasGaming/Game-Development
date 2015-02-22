@@ -10,9 +10,15 @@ extern "C"{
 #include <string>
 using namespace std;
 
+#ifndef API_EXPORTS
+#define JFE_API __declspec(dllexport) 
+#else
+#define JFE_API __declspec(dllimport)
+#endif
+
 namespace JackFruitEngine{
 
-	class kpBindLua 
+	class JFE_API kpBindLua 
 	{
 	lua_State* L;
 	public:

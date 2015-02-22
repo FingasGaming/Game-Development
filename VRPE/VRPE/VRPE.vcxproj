@@ -43,6 +43,7 @@
     <TargetExt>.dll</TargetExt>
     <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
     <LibraryPath>$(ProjectDir)..\VRPE\Middleware\SDL2\bin\;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <IncludePath>$(ProjectDir)..\VRPE\Middleware\SDL2\include\;$(ProjectDir)..\VRPE\Middleware\GLEW\include\;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -80,6 +81,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bin\Util\kpSystem\kpINI\cpp\INIReader.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpINI\ini.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpINI\kpINI.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpLua\lapi.c" />
     <ClCompile Include="bin\Util\kpSystem\kpLua\lauxlib.c" />
     <ClCompile Include="bin\Util\kpSystem\kpLua\lbaselib.c" />
@@ -113,6 +117,7 @@
     <ClCompile Include="bin\Util\kpSystem\kpLua\lvm.c" />
     <ClCompile Include="bin\Util\kpSystem\kpLua\lzio.c" />
     <ClCompile Include="bin\Util\kpBase\kpComponent.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpTimer.cpp" />
     <ClCompile Include="kpAPI.cpp" />
     <ClCompile Include="kpCore.cpp" />
     <ClCompile Include="bin\Util\kpEngine.cpp" />
@@ -125,6 +130,10 @@
     <ClCompile Include="bin\Util\kpSystem\kpStructure.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bin\Util\kpSystem\kpINI\cpp\INIReader.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpINI\ini.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpINI\kpINI.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLog.h" />
     <ClInclude Include="bin\Util\kpSystem\kpLua\lapi.h" />
     <ClInclude Include="bin\Util\kpSystem\kpLua\lauxlib.h" />
     <ClInclude Include="bin\Util\kpSystem\kpLua\lcode.h" />
@@ -152,6 +161,8 @@
     <ClInclude Include="bin\Util\kpSystem\kpLua\lzio.h" />
     <ClInclude Include="bin\Util\kpBindLua.h" />
     <ClInclude Include="bin\Util\kpBase\kpComponent.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpProfileTimer.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpTimer.h" />
     <ClInclude Include="kpCore.h" />
     <ClInclude Include="bin\Util\kpEngine.h" />
     <ClInclude Include="kpKernel.h" />

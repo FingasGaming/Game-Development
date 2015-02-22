@@ -39,7 +39,16 @@ int JackFruitEngine::kpApplication::run(const char* fileName)
 	int error = kernel->initialise();
 	if(error == 0)
 	{
-		error = kernel->run(fileName);
+		error = kernel->run(fileName, 0);
+	}
+	return error;
+}
+int JackFruitEngine::kpApplication::run(const char* fileName, int mode)
+{
+	int error = kernel->initialise();
+	if(error == 0)
+	{
+		error = kernel->run(fileName, mode);
 	}
 	return error;
 }

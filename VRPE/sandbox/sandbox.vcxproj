@@ -42,6 +42,7 @@
     <IntDir>$(Configuration)\Temp\</IntDir>
     <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
     <LibraryPath>$(ProjectDir)..\VRPE\$(Configuration);$(ProjectDir)..\VRPE\Middleware\SDL2\bin\;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <IncludePath>$(ProjectDir)..\VRPE\Middleware\SDL2\include\;$(ProjectDir)..\VRPE\Middleware\GLEW\include\;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -61,7 +62,10 @@
       <AdditionalDependencies>VRPE.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>copy "$(ProjectDir)..\VRPE\$(Configuration)\VRPE.dll" "$(OutDir)"</Command>
+      <Command>copy "$(ProjectDir)..\VRPE\$(Configuration)\VRPE.dll" "$(OutDir)"
+copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2.dll" "$(OutDir)"
+copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2_image.dll" "$(OutDir)"
+copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2_ttf.dll" "$(OutDir)"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

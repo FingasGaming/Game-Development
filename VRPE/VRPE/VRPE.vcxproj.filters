@@ -108,6 +108,10 @@
     <ClCompile Include="bin\Util\kpMath\kpQuaternion.cpp" />
     <ClCompile Include="bin\Util\kpMath\kpTransform.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpStructure.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpINI\kpINI.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpINI\ini.c" />
+    <ClCompile Include="bin\Util\kpSystem\kpINI\cpp\INIReader.cpp" />
+    <ClCompile Include="bin\Util\kpSystem\kpTimer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kpCore.h" />
@@ -196,6 +200,12 @@
     <ClInclude Include="bin\Util\kpMath\kpQuaternion.h" />
     <ClInclude Include="bin\Util\kpMath\kpTransform.h" />
     <ClInclude Include="bin\Util\kpSystem\kpStructure.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpINI\kpINI.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpINI\ini.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpINI\cpp\INIReader.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpTimer.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpLog.h" />
+    <ClInclude Include="bin\Util\kpSystem\kpProfileTimer.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="data">

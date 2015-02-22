@@ -36,15 +36,16 @@ bool JackFruitEngine::kpScript::call(lua_State* s, int args, int retrns)
 	return true;
 }
 bool JackFruitEngine::kpScript::call(lua_State* s, const char* func, int args, int retrns)
-{
+ {
 	if(load(s))
 	{
 		lua_getglobal(s, func);
 		if(lua_isfunction(s, lua_gettop(s)))
 		{
 			lua_pcall(s,args,retrns,0);
+			return true;
 		}
-		return true;
+		return false;
 	}
 	return false;
 }
