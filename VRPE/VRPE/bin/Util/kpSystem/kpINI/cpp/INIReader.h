@@ -8,12 +8,18 @@
 #ifndef __INIREADER_H__
 #define __INIREADER_H__
 
+#ifndef API_EXPORTS
+#define JFE_API __declspec(dllexport) 
+#else
+#define JFE_API __declspec(dllimport)
+#endif
+
 #include <map>
 #include <string>
 
 // Read an INI file into easy-to-access name/value pairs. (Note that I've gone
 // for simplicity here rather than speed, but it should be pretty decent.)
-class INIReader
+class JFE_API INIReader
 {
 public:
     // Construct INIReader and parse given filename. See ini.h for more info

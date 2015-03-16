@@ -47,6 +47,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\VRPE\Middleware\SDL2\include\;$(ProjectDir)..\VRPE\Middleware\GLEW\include\;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>$(ProjectDir)..\VRPE\Middleware\SDL2\bin\;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -55,12 +57,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\VRPE\Middleware\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\VRPE\Middleware\SDL2\include;$(ProjectDir)..\VRPE\Middleware\GLEW\include;C:\Andre backup files\SDKs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;opengl32.lib;glu32.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -72,15 +74,20 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\VRPE\Middleware\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;opengl32.lib;glu32.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bin\Util\kpMath\camera.cpp" />
+    <ClCompile Include="bin\Util\kpMath\matrices.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpINI\cpp\INIReader.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpINI\ini.c" />
     <ClCompile Include="bin\Util\kpSystem\kpINI\kpINI.cpp" />
@@ -119,8 +126,12 @@
     <ClCompile Include="bin\Util\kpBase\kpComponent.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpTimer.cpp" />
     <ClCompile Include="kpAPI.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpBlueprint.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpCamera.cpp" />
     <ClCompile Include="kpCore.cpp" />
     <ClCompile Include="bin\Util\kpEngine.cpp" />
+    <ClCompile Include="bin\Blueprints\kpGame.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpGameObject.cpp" />
     <ClCompile Include="kpKernel.cpp" />
     <ClCompile Include="bin\Util\kpBase\kpScript.cpp" />
     <ClCompile Include="bin\Util\kpMath\kpVector3f.cpp" />
@@ -128,8 +139,14 @@
     <ClCompile Include="bin\Util\kpMath\kpQuaternion.cpp" />
     <ClCompile Include="bin\Util\kpMath\kpTransform.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpStructure.cpp" />
+    <ClCompile Include="bin\Blueprints\kpWindow.cpp" />
+    <ClCompile Include="bin\Blueprints\kpRenderEngine.cpp" />
+    <ClCompile Include="bin\Blueprints\kpSprite.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpShader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bin\Util\kpMath\camera.h" />
+    <ClInclude Include="bin\Util\kpMath\matrices.h" />
     <ClInclude Include="bin\Util\kpSystem\kpINI\cpp\INIReader.h" />
     <ClInclude Include="bin\Util\kpSystem\kpINI\ini.h" />
     <ClInclude Include="bin\Util\kpSystem\kpINI\kpINI.h" />
@@ -163,8 +180,12 @@
     <ClInclude Include="bin\Util\kpBase\kpComponent.h" />
     <ClInclude Include="bin\Util\kpSystem\kpProfileTimer.h" />
     <ClInclude Include="bin\Util\kpSystem\kpTimer.h" />
+    <ClInclude Include="bin\Util\kpBase\kpBlueprint.h" />
+    <ClInclude Include="bin\Util\kpBase\kpCamera.h" />
     <ClInclude Include="kpCore.h" />
     <ClInclude Include="bin\Util\kpEngine.h" />
+    <ClInclude Include="bin\Blueprints\kpGame.h" />
+    <ClInclude Include="bin\Util\kpBase\kpGameObject.h" />
     <ClInclude Include="kpKernel.h" />
     <ClInclude Include="bin\Util\kpBase\kpScript.h" />
     <ClInclude Include="bin\Util\kpMath\kpVector3f.h" />
@@ -172,6 +193,10 @@
     <ClInclude Include="bin\Util\kpMath\kpQuaternion.h" />
     <ClInclude Include="bin\Util\kpMath\kpTransform.h" />
     <ClInclude Include="bin\Util\kpSystem\kpStructure.h" />
+    <ClInclude Include="bin\Blueprints\kpWindow.h" />
+    <ClInclude Include="bin\Blueprints\kpRenderEngine.h" />
+    <ClInclude Include="bin\Blueprints\kpSprite.h" />
+    <ClInclude Include="bin\Util\kpBase\kpShader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

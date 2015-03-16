@@ -15,9 +15,10 @@ namespace JackFruitEngine
 		~kpKernel(void);
 		bool kill();
 		int initialise();
-		int run();
-		int run(const char* luafile);
-		int run(const char* luafile, int mode = 0);
+		int run(kpWindow* win);
+		int run(const char* luafile);		
+		int run(const char* luafile, int mode);
+		int run(kpGame* game, int mode);
 	private:
 		lua_State* l;
 		int returnError;

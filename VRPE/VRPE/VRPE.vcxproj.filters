@@ -112,6 +112,16 @@
     <ClCompile Include="bin\Util\kpSystem\kpINI\ini.c" />
     <ClCompile Include="bin\Util\kpSystem\kpINI\cpp\INIReader.cpp" />
     <ClCompile Include="bin\Util\kpSystem\kpTimer.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpBlueprint.cpp" />
+    <ClCompile Include="bin\Blueprints\kpGame.cpp" />
+    <ClCompile Include="bin\Blueprints\kpWindow.cpp" />
+    <ClCompile Include="bin\Blueprints\kpRenderEngine.cpp" />
+    <ClCompile Include="bin\Blueprints\kpSprite.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpShader.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpCamera.cpp" />
+    <ClCompile Include="bin\Util\kpBase\kpGameObject.cpp" />
+    <ClCompile Include="bin\Util\kpMath\matrices.cpp" />
+    <ClCompile Include="bin\Util\kpMath\camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kpCore.h" />
@@ -206,6 +216,16 @@
     <ClInclude Include="bin\Util\kpSystem\kpTimer.h" />
     <ClInclude Include="bin\Util\kpSystem\kpLog.h" />
     <ClInclude Include="bin\Util\kpSystem\kpProfileTimer.h" />
+    <ClInclude Include="bin\Util\kpBase\kpBlueprint.h" />
+    <ClInclude Include="bin\Blueprints\kpGame.h" />
+    <ClInclude Include="bin\Blueprints\kpWindow.h" />
+    <ClInclude Include="bin\Blueprints\kpRenderEngine.h" />
+    <ClInclude Include="bin\Blueprints\kpSprite.h" />
+    <ClInclude Include="bin\Util\kpBase\kpShader.h" />
+    <ClInclude Include="bin\Util\kpBase\kpCamera.h" />
+    <ClInclude Include="bin\Util\kpBase\kpGameObject.h" />
+    <ClInclude Include="bin\Util\kpMath\matrices.h" />
+    <ClInclude Include="bin\Util\kpMath\camera.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="data">

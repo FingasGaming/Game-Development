@@ -16,6 +16,8 @@
 
 #include "kpKernel.h"
 
+
+#include "bin\Util\kpBase\kpGameObject.h"
 namespace JackFruitEngine
 {
 	class JFE_API kpCore
@@ -34,12 +36,12 @@ namespace JackFruitEngine
 		~kpApplication(void);
 
 		//function runs the engine as a application from other cpp projects
-		int run();
+		int run(kpWindow* win);
 		//function runs the engine as a application from cpp game class
-		//int run(kpGame game);
+		int run(kpGame* game, int mode);
 		//function runs the engine as a application from a lua script file
 		int run(const char* fileName);
-		int run(const char* fileName, int mode = 0);
+		int run(const char* fileName, int mode);
 	};
 }
 #endif

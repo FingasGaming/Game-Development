@@ -7,9 +7,11 @@
 #include <SDL.h>
 
 #ifndef API_EXPORTS
-#define JFE_API __declspec(dllexport) 
+	#undef JFE_API
+	#define JFE_API __declspec(dllexport) 
 #else
-#define JFE_API __declspec(dllimport)
+	#undef JFE_API
+	#define JFE_API __declspec(dllimport)
 #endif
 
 namespace JackFruitEngine

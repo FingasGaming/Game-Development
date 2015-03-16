@@ -230,7 +230,7 @@ int LUA_IMG_LoadTexture(lua_State* l)
 int LUA_CreateWindow(lua_State* l)
 {
 	kpBindLua binder(l);
-	binder.pushusertype(SDL_CreateWindow(binder.checkstring(1), binder.checkinteger(2), binder.checkinteger(3), binder.checkinteger(4), binder.checkinteger(5), SDL_WINDOW_OPENGL | (Uint32)binder.checkinteger(6)), "SDL_Window");
+	binder.pushusertype(SDL_CreateWindow(binder.checkstring(1), binder.checkinteger(2), binder.checkinteger(3), binder.checkinteger(4), binder.checkinteger(5), SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | (Uint32)binder.checkinteger(6)), "SDL_Window");
 	return 1;
 }
 int LUA_CreateGLContext(lua_State* l)

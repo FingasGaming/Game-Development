@@ -2,7 +2,10 @@
 #ifndef KPTRANSFORM_H
 #define KPTRANSFORM_H
 
+#include "matrices.h"
+
 #include "kpQuaternion.h"
+
 
 namespace JackFruitEngine
 {

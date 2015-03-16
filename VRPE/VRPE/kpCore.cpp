@@ -25,12 +25,21 @@ JackFruitEngine::kpApplication::~kpApplication(void)
 	}
 }
 
-int JackFruitEngine::kpApplication::run()
+int JackFruitEngine::kpApplication::run(kpWindow* win)
 {
 	int error = kernel->initialise();
 	if(error == 0)
 	{
-		error = kernel->run();
+		error = kernel->run(win);
+	}
+	return error;
+}
+int JackFruitEngine::kpApplication::run(kpGame* game, int mode)
+{
+	int error = kernel->initialise();
+	if(error == 0)
+	{
+		error = kernel->run(game, mode);
 	}
 	return error;
 }

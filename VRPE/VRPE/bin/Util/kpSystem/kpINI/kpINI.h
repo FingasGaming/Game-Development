@@ -11,11 +11,7 @@
 #include "cpp\INIReader.h"
 using namespace std;
 
-#ifndef API_EXPORTS
-#define JFE_API __declspec(dllexport) 
-#else
-#define JFE_API __declspec(dllimport)
-#endif
+
 
 namespace JackFruitEngine
 {

@@ -15,7 +15,7 @@ function new(window)
 	function O:setCamera(cam)
 		self.mainCamera = cam
 	end
-	function O:gerAvtiveLight()
+	function O:getActiveLight()
 		return self.activeLight
 	end
 	function O:onDraw(render)

@@ -46,6 +46,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\VRPE\Middleware\SDL2\include\;$(ProjectDir)..\VRPE\Middleware\GLEW\include\;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>$(ProjectDir)..\VRPE\$(Configuration);$(ProjectDir)..\VRPE\Middleware\SDL2\bin\;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -77,16 +79,30 @@ copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2_ttf.dll" "$(OutDir)"</Command>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\VRPE\;$(ProjectDir)..\VRPE\Middleware\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>VRPE.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>copy "$(ProjectDir)..\VRPE\$(Configuration)\VRPE.dll" "$(OutDir)"
+copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2.dll" "$(OutDir)"
+copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2_image.dll" "$(OutDir)"
+copy "$(ProjectDir)..\Middleware\SDL2\bin\SDL2_ttf.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="game\assets\src\game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="game\assets\src\MainWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game\assets\src\game.h" />
+    <ClInclude Include="game\assets\src\MainWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

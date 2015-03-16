@@ -2,7 +2,7 @@
 #ifndef ENGINE_SCRIPT_H
 #define ENGINE_SCRIPT_H
 
-#include "../kpSystem/kpLua/lua.hpp"
+
 
 #include "kpComponent.h"
 
